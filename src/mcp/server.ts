@@ -5,6 +5,7 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 import { captureAndAnalyzeSite } from '../index.js';
+import { readVersion } from '../version.js';
 import { VisualDiffEngine } from '../core/visual-diff.js';
 import { TokenCompiler } from '../core/token-compiler.js';
 import type { DesignDNA } from '../types/index.js';
@@ -13,7 +14,7 @@ export async function startMcpServer() {
   const server = new Server(
     {
       name: 'reweb-mcp',
-      version: '1.0.0',
+      version: readVersion(),
     },
     {
       capabilities: {

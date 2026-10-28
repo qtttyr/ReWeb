@@ -1,9 +1,9 @@
 {
   "name": "reweb-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The 1-to-1 Design DNA Extraction & Transmutation Engine — clone any website's computed design system into your stack. MCP server + CLI.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "bin": {
     "reweb": "./dist/bin/reweb.js"
   },
@@ -12,7 +12,9 @@
     "dist"
   ],
   "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
     "build": "tsc",
+    "prebuild": "npm run clean",
     "prepack": "npm run build",
     "start": "tsx bin/reweb.ts",
     "mcp": "tsx src/mcp/server.ts"

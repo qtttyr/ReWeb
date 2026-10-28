@@ -4,6 +4,7 @@ import chalk from 'chalk';
 import path from 'path';
 import readline from 'readline/promises';
 import { captureAndAnalyzeSite } from '../src/index.js';
+import { readVersion } from '../src/version.js';
 import { VisualDiffEngine } from '../src/core/visual-diff.js';
 import { ProviderIntegrator } from '../src/integrations/setup.js';
 
@@ -56,7 +57,7 @@ async function runExtraction(targetUrl: string, outputDir?: string) {
 program
   .name('reweb')
   .description('✦ ReWeb: Instant 1-to-1 Design Transmutation Engine')
-  .version('1.0.0')
+  .version(readVersion())
   .argument('[url]', 'Website URL to clone (e.g. reweb linear.app)')
   .option('-o, --output <dir>', 'Custom output directory')
   .action(async (url?: string, options?: { output?: string }) => {

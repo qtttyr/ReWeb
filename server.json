@@ -3,7 +3,7 @@
   "name": "io.github.qtttyr/reweb",
   "title": "ReWeb — Design DNA Extraction Engine",
   "description": "Extract computed design DNA from any live website and press it 1:1 into your stack.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://reweb.dev",
   "repository": {
     "url": "https://github.com/qtttyr/ReWeb",
@@ -13,7 +13,7 @@
     {
       "registryType": "npm",
       "identifier": "reweb-mcp",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       },
