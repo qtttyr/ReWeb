@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   ReWeb Landing — 4 DNAs, one engine
+   ◉ sebg.ch        → kinetic cobalt + halftone
+   ◉ relevovinco.com → kraft letterpress
+   ◉ kelvin.8b.com   → thermal cream gradient
+   ◉ stash.cool      → mono directory
+   ───────────────────────────────────────────── */
+
+:root {
+  /* sebg DNA */
+  --seb-bg: rgb(34, 97, 233);
+  --seb-cream: rgb(251, 251, 248);
+  --seb-ink: rgb(17, 13, 25);
+
+  /* relevo DNA */
+  --kraft: rgb(212, 176, 143);
+  --kraft-deep: rgb(191, 156, 122);
+  --ink-brown: rgb(54, 38, 26);
+  --ink-soft: rgb(107, 76, 52);
+
+  /* kelvin DNA */
+  --paper: rgb(241, 237, 228);
+  --ink-dark: rgb(17, 13, 25);
+  --thermal: linear-gradient(180deg, #2b46d8 0%, #2b8ad8 22%, #35c78a 40%, #f2d535 58%, #f28e35 78%, #f2316b 100%);
+
+  /* stash DNA */
+  --coal: rgb(26, 26, 26);
+  --coal-line: rgba(242, 242, 242, 0.14);
+  --bone: rgb(242, 242, 242);
+  --live-yellow: #f5e942;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--seb-bg);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--ink-dark);
+  color: var(--paper);
+}
+
+/* ── type helpers ── */
+.f-display {
+  font-family: var(--font-funnel), sans-serif;
+}
+.f-instrument {
+  font-family: var(--font-instrument), sans-serif;
+}
+.f-serif {
+  font-family: var(--font-instrument-serif), serif;
+}
+.f-hubot {
+  font-family: "Hubot Sans Variable", var(--font-funnel), sans-serif;
+}
+.f-mono {
+  font-family: var(--font-space), monospace;
+}
+
+/* ── hero pill (sebg DNA, refined) ── */
+.hero-pill {
+  position: relative;
+  border-radius: 9999px;
+  background: var(--seb-cream);
+  color: var(--seb-ink);
+  box-shadow: 3px 3px 0 0 rgba(17, 13, 25, 0.92);
+  white-space: nowrap;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.hero-pill:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 rgba(17, 13, 25, 0.92);
+}
+.hero-pill:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 0 rgba(17, 13, 25, 0.92);
+}
+.hero-pill-arrow {
+  display: inline-block;
+  animation: nudge 2.2s cubic-bezier(0.45, 0, 0.15, 1) infinite;
+}
+@keyframes nudge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  12% {
+    transform: translateY(3px);
+  }
+  24% {
+    transform: translateY(0);
+  }
+}
+
+/* ── stash-style hairline rules ── */
+.hairline {
+  border-top: 1px solid var(--coal-line);
+}
+
+/* ── kelvin-style pink gradient underline ── */.k-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.k-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #f2316b, #f28e35, #f2d535);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.k-link:hover::after {
+  transform: scaleX(0.35);
+}
+
+/* ── sebg-style hard offset pill button ── */
+.hard-pill {
+  position: relative;
+  border-radius: 9999px;
+  background: var(--seb-cream);
+  color: var(--seb-ink);
+  box-shadow: 3px 3px 0 0 rgba(17, 13, 25, 0.9);
+  transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hard-pill:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 rgba(17, 13, 25, 0.9);
+}
+.hard-pill:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 0 rgba(17, 13, 25, 0.9);
+}
+
+/* ── relevo letterpress ── */
+.emboss {
+  background: var(--ink-brown);
+  color: var(--kraft);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 2px 0 0 rgba(255, 235, 200, 0.22),
+    inset 0 -3px 0 0 rgba(0, 0, 0, 0.45),
+    0 14px 34px -12px rgba(54, 38, 26, 0.5);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.55), 0 1px 0 rgba(255, 240, 210, 0.28);
+}
+.deboss {
+  color: var(--ink-brown);
+  text-shadow:
+    0 1px 0 rgba(255, 245, 225, 0.75),
+    0 -1px 0 rgba(97, 62, 34, 0.45);
+}
+.press-card {
+  background: var(--kraft);
+  color: var(--ink-brown);
+  border-radius: 8px;
+  box-shadow:
+    inset 0 2px 0 0 rgba(255, 250, 235, 0.55),
+    inset 0 -2px 0 0 rgba(84, 54, 28, 0.4),
+    0 10px 26px -10px rgba(54, 38, 26, 0.55);
+}
+
+/* ── grain (relevo speckle paper) ── */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42  0 0 0 0 0.30  0 0 0 0 0.18  0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* ── spec section (sstr DNA) ── */
+.spec-bg {
+  background-image: radial-gradient(circle, rgba(47, 48, 50, 0.13) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+}
+.spec-dot {
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  background: rgb(254, 91, 42);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.spec-row:hover .spec-dot {
+  transform: rotate(45deg) scale(1.25);
+}
+
+/* ── thermal gradient text (kelvin giant word) ── */
+.thermal-text {
+  background: linear-gradient(180deg, #2b46d8 0%, #2b8ad8 22%, #35c78a 40%, #f2d535 58%, #f28e35 78%, #f2316b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ── stash directory row hover inversion ── */
+.dir-row {
+  transition: background 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.dir-row:hover {
+  background: var(--bone);
+  color: var(--coal);
+}
+.dir-row:hover .dir-dim {
+  color: rgba(38, 38, 38, 0.55);
+}
+.dir-row:hover .dir-copy {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dir-copy {
+  opacity: 0.6;
+  transform: translateY(0);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.dir-row:hover .dir-copy {
+  opacity: 1;
+}
+
+/* ── terminal caret ── */
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 2px;
+  background: var(--live-yellow);
+  vertical-align: text-bottom;
+  animation: blink 1.05s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* ── live pulse dot ── */
+.pulse-dot {
+  position: relative;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 1px solid var(--live-yellow);
+  animation: ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  80%,
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ── marquee ── */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 26s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track,
+  .pulse-dot::after,
+  .caret::after {
+    animation: none;
+  }
+}

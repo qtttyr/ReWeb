@@ -1,0 +1,24 @@
+# deps
+node_modules/
+
+# builds
+dist/
+landing/.next/
+landing/out/
+
+# reweb working output
+.reweb/
+*.png
+!landing/app/*.png
+!landing/public/**/*.png
+!assets/*.svg
+
+# junk
+.DS_Store
+*.log
+.playwright-mcp/
+.cursor/
+
+# local env
+.env
+.env.*

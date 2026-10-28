@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+<defs>
+  <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse">
+    <circle cx="4.5" cy="4.5" r="0.85" fill="#fbfbf8" opacity="0.07"/>
+  </pattern>
+</defs>
+<rect width="1200" height="320" fill="#2261e9"/>
+<rect width="1200" height="320" fill="url(#dots)"/>
+<g transform="translate(810 28) scale(8.2)">
+  <path d="M12 5H8a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-4" stroke="#fbfbf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+  <path d="M13.5 18.5 20 12" stroke="#fbfbf8" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.95"/>
+  <circle cx="23.75" cy="8.25" r="3.4" fill="#f5e942"/>
+</g>
+<g font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <text x="64" y="150" font-size="92" font-weight="800" letter-spacing="-4" fill="#fbfbf8">reweb</text>
+  <text x="66" y="196" font-size="21" font-weight="300" fill="#fbfbf8" opacity="0.85">the design transmutation engine</text>
+  <text x="65" y="256" font-size="13" font-weight="700" letter-spacing="3" font-family="'SFMono-Regular', Menlo, Consolas, monospace" fill="#f5e942">npx reweb-mcp</text>
+  <text x="66" y="288" font-size="11" font-weight="400" letter-spacing="2.5" font-family="'SFMono-Regular', Menlo, Consolas, monospace" fill="#fbfbf8" opacity="0.55">MADE BY MIRAS KUSTAIBEK</text>
+</g>
+</svg>

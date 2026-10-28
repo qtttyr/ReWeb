@@ -1,0 +1,71 @@
+{
+  "name": "reweb-mcp",
+  "version": "1.0.0",
+  "description": "The 1-to-1 Design DNA Extraction & Transmutation Engine — clone any website's computed design system into your stack. MCP server + CLI.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "reweb": "./dist/bin/reweb.js"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build",
+    "start": "tsx bin/reweb.ts",
+    "mcp": "tsx src/mcp/server.ts"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "design-system",
+    "design-tokens",
+    "awwwards",
+    "playwright",
+    "frontend",
+    "tailwind",
+    "css",
+    "cli",
+    "claude",
+    "cursor",
+    "opencode"
+  ],
+  "author": "Miras Kustaibek",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qtttyr/ReWeb.git"
+  },
+  "homepage": "https://github.com/qtttyr/ReWeb#readme",
+  "bugs": {
+    "url": "https://github.com/qtttyr/ReWeb/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "pixelmatch": "^7.1.0",
+    "playwright-core": "^1.64.1",
+    "pngjs": "^7.0.0",
+    "zod": "^3.24.2"
+  },
+  "optionalDependencies": {
+    "@playwright/browser-chromium": "^1.64.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/pixelmatch": "^7.1.0",
+    "@types/pngjs": "^6.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "allowScripts": {
+    "@playwright/browser-chromium@1.64.1": true
+  }
+}

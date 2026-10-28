@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.qtttyr/reweb",
+  "title": "ReWeb — Design DNA Extraction Engine",
+  "description": "Extract computed design DNA from any live website and press it 1:1 into your stack.",
+  "version": "1.0.0",
+  "websiteUrl": "https://reweb.dev",
+  "repository": {
+    "url": "https://github.com/qtttyr/ReWeb",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "reweb-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "valueHint": "mcp",
+          "isRequired": true,
+          "description": "Run the ReWeb MCP server on stdio"
+        }
+      ]
+    }
+  ]
+}

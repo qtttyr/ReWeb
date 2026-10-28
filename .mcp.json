@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "reweb": {
+      "command": "node",
+      "args": [
+        "/Users/miras/Desktop/Projects/ReWeb/dist/src/mcp/server.js"
+      ]
+    }
+  }
+}
